@@ -16,12 +16,10 @@ class Solution:
             second_word = [char for char in word if char in second_row]  # and so on
             third_word = [char for char in word if char in third_row]
 
-            if len(first_word) == len(
-                    word):  # if length is the same, it means only letters from first row were necessary
+            if (
+                len(first_word) == len(word)
+                or len(second_word) == len(word)
+                or len(third_word) == len(word)
+            ):  # if length is the same, it means only letters from first row were necessary
                 result.append(word)  # add word to the list
-            elif len(second_word) == len(word):  # and so on
-                result.append(word)
-            elif len(third_word) == len(word):
-                result.append(word)
-
         return result

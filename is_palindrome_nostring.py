@@ -5,13 +5,10 @@ class Solution:
         while (number > 0):
             reminder = number % 10  # getting last digit (units) from the number
             reverse = (reverse * 10) + reminder  # creating new reversed number
-            number = number // 10  # getting the number without last digit (cutting units)
+            number //= 10
 
         # x has to be bigger than 0 because negative numbers don't meet the criteria
-        if x >= 0 and x == reverse:
-            return True
-        else:
-            return False
+        return x >= 0 and x == reverse
 
 """
 I hope I helped you in some way. If you like this solution, I'll be very happy if you click "Star" on Github:

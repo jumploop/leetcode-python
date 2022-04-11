@@ -6,7 +6,5 @@ class Solution:
 		result = []
 
 		for x, y in zip(even, odd):
-			result.append(x)
-			result.append(y)        # join even and odd numbers starting from even
-
+			result.extend((x, y))
 		return result

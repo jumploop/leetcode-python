@@ -1,11 +1,7 @@
 class Solution:
     def arrayPairSum(self, nums):
         nums = sorted(nums)  # to make it as big as possible, array should be sorted
-        result = 0  # sum will be stored here
-        for i in range(0, len(nums) - 1, 2):  # iterate from first to second last counting every second element
-            result += min(nums[i], nums[i + 1])  # get min and add to the result
-
-        return result
+        return sum(min(nums[i], nums[i + 1]) for i in range(0, len(nums) - 1, 2))
 
 """
 I hope I helped you in some way. If you like this solution, I'll be very happy if you click "Star" on Github:

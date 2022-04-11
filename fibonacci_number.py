@@ -7,7 +7,5 @@ class Solution:
 
         results = [0, 1]
 
-        for i in range(1, N):
-            results.append(sum(results[-2:]))
-
+        results.extend(sum(results[-2:]) for _ in range(1, N))
         return results[-1]

@@ -33,8 +33,8 @@ class Node:
         if root:
             print(root.data)
             res.append(root.data)
-            res = res + self.PreorderTraversal(root.left)
-            res = res + self.PreorderTraversal(root.right)
+            res += self.PreorderTraversal(root.left)
+            res += self.PreorderTraversal(root.right)
         return res
 
 

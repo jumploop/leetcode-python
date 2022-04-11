@@ -18,16 +18,13 @@ class Solution:
             elif A[i] == 0:
                 return sum(A)
             else:
-                if K % 2 == 0:
-                    return sum(A)
-                else:
+                if K % 2 != 0:
                     if A[i] < A[i - 1]:
                         A[i] = -A[i]
-                        return sum(A)
                     else:
                         print(A)
                         A[i - 1] = -A[i - 1]
-                        return sum(A)
+                return sum(A)
             i += 1
 
         return sum(A)

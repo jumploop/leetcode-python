@@ -8,6 +8,5 @@ class Solution:
 		It's enough to return index of key with value 1.
 		If there isn't such key, it means there's no unique character so return -1.
 		"""
-		for key, value in Counter(s).items():
-			if value == 1: return(s.index(key))
-		return -1
+		return next(
+		    ((s.index(key)) for key, value in Counter(s).items() if value == 1), -1)
