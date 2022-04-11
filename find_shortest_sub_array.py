@@ -17,7 +17,7 @@ class Solution:
 				indices_dic[n] = [i]
 
 		# calculate the amount of the most frequent number
-		M = max([len(i) for i in indices_dic.values()])
+		M = max(len(i) for i in indices_dic.values())
 
 		# calculate length for all the most frequent numbers and get the shortest
-		return min([i[-1]-i[0] for i in indices_dic.values() if len(i) == M]) + 1
+		return min(i[-1]-i[0] for i in indices_dic.values() if len(i) == M) + 1
